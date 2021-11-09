@@ -1,11 +1,16 @@
 export default {
     props: ['txt'],
     template: `
-    <div class="long-text">
-        <p v-if="txt.length > 100 && !isOpen">{{shortTextToDisplay}} </p>
-        <p v-if="txt.length <= 100 || isOpen">{{txt}}</p>
-        <a v-if="txt.length > 100" @click="onShowMore" href="#">{{tagShowToDisplay}}</a>
-    </div>
+    <section v-if="txt" class="long-text">
+        <div>
+            <p v-if="txt.length > 100 && !isOpen">{{shortTextToDisplay}} </p>
+            <p v-if="txt.length <= 100 || isOpen">{{txt}}</p>
+            <a v-if="txt.length > 100" @click="onShowMore" href="#">{{tagShowToDisplay}}</a>
+        </div>
+    </section>
+    <section v-else>
+        Description is not available
+    </section>
     `,
     data() {
         return {

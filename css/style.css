@@ -73,7 +73,7 @@ body {
 
 /* list */
 
-.book-list {
+.book-list-container {
   margin: 0;
   padding: 20px;
   list-style: none;

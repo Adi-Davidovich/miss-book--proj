@@ -9,6 +9,7 @@ export default {
     },
     template: `
         <section class="book-app app-main" >
+            <router-link :to="'/book/add'">Add a new book</router-link>
             <book-filter @filtered="setFilter"/>   
             <book-list :books="booksToShow"/>
         </section>

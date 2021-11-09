@@ -61,7 +61,8 @@ export default {
             else if (this.book.listPrice.amount < 20) return 'green'
         },
         categoriesToDisplay() {
-           return this.book.categories.join(', ')
+            if(!this.book.categories) return ''
+           else return this.book.categories.join(', ')
         },
         authorsToDisplay() {
            return this.book.authors.join(', ')
